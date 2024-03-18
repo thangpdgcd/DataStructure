@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Main {
+
+
     public static void main(String[] args) {
         {
             //Get element in Array
@@ -13,24 +18,37 @@ public class Main {
             //example3:
             //extend in Class Student-1
             Student student1 = new Student();
-            student1.name = "I am a Programming";
+            student1.name = "I am a Programming ";
             System.out.println( student1.name);
 
             //extend in Class Student-2
             Student student2 =new Student();
-            student2.age = "21";
+            student2.age = "21 ";
             System.out.println( student2.age);
 
             //extend in Class Student-3
             Student student3 =new Student();
-            student3.Address = "Da Nang";
+            student3.Address = "Da Nang ";
             System.out.println(student3.Address);
 
-            //Create Object in Student
-            Student[] myClass ={student1,student2,student3};
+            //extend in Class Student-3
+            Student student4 =new Student();
+            System.out.println(student4.name);
 
-            //get first element in array myClass
-            System.out.println("Element first in Array " + myClass[0].name);
+            //ArrayList
+            ArrayList<Student>myClass =new ArrayList<>() ;
+            myClass.add(student1);
+            myClass.add(student2);
+            myClass.add(student3);
+            myClass.add(student4);
+
+            //print a list
+            System.out.println(myClass);
+
+            //remove
+            myClass.remove(2);
+            System.out.println("Element remove" + myClass);
+
         }
 
     }
