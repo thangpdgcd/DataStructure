@@ -1,83 +1,100 @@
+import java.security.PublicKey;
 import java.util.AbstractList;
 import java.util.Arrays;
-import java.util.Iterator;
 
-public class ArrayListEnhanced<E> implements AbtractList {
-    private int[] elements = new int[5]; //tạo một mảng với kích thước = 5
-
+public class ArrayListEnhanced<E> implements AbtractList<E> {
+    private final int DEFAULT_CAPACITY = 5;
+    private E[] elements;
     private int index = 0;
 
-    @Override
-    public boolean add(int element) {
-        if (this.index == elements.length) {
-            elements = Arrays.copyOf(this.elements, this.elements.length * 2);
-        }
-        //tạo 1 array mới gấp đôi array cũ, copy lại những số đầu = copyof
-        this.elements[this.index] = element; //nhập 1 số vào với index = 0
-        this.index = this.index + 1;// nhập tiếp theo vào số index phía sau, để khỏi phải nhập trùng ô
-        return true;
+    // constructor
+    public ArrayListEnhanced() {
+        this.elements = (E[]) new Object[DEFAULT_CAPACITY];
     }
 
     @Override
-    public boolean add(int index, int element) { // chèn dữ liệu vào ô tiếp theo
-        //move data to the right -> loop
-//        for(int i = this.index; i > index ; i-- ){
-//            elements[i] = elements[i - 1]; // index của hiện tại -1, lấy i-1 bỏ vào i
-//        }
+    public boolean add(E element) {
         if (this.index == elements.length) {
-//            //option1
-//            System.out.println("Array is full now");
-//            return false;
-            //option2
             this.elements = Arrays.copyOf(this.elements, this.elements.length * 2);
         }
-        //insert new data
+
+        this.elements[this.index] = element;
+        this.index = this.index + 1;
+        return true;
+
+    }
+
+    @Override
+    public boolean add(int index, E element) {
+        if (index < 0 || index >= this.index) {
+            throw new IndexOutOfBoundsException("Index out of bound.");
+        }
+
+        if (this.index == elements.length) {
+            this.elements = Arrays.copyOf(this.elements, this.elements.length * 2);
+        }
+
+        // 1: move data to the right -> loop
+        for (int i = this.index; i > index; i--) {
+            elements[i] = elements[i - 1];
+        }
+
+        // 2: insert new data
         elements[index] = element;
         this.index = this.index + 1;
+
         return true;
     }
 
     @Override
-    public int get(int index) {
-        //
-        if (index >= 0 && index < this.index) {
-            throw new IllegalStateException("Out of the list");
+    public E get(int index) {
+        if (index < 0 || index >= this.index) {
+            throw new IndexOutOfBoundsException("Index out of bound.");
+        }
+        return this.elements[index];
+    }
+
+    @Override
+    public E set(int index, E element) {
+        if (index < 0 || index >= this.index) {
+            throw new IndexOutOfBoundsException("Index out of bound.");
         }
 
-        return this.elements[index];//xem trong index là giá trị gì ở trong
+        E temp = this.elements[index];
+        this.elements[index] = element;
+        return temp;
     }
 
     @Override
-    public int set(int index, int element) {
-        int temp = this.elements[index]; //tạo temp là một biến tạm, trả số cũ ra
-        this.elements[index] = element;// đưa một số mới vào
-        return temp;// thay thành một số mới
-    }
+    public E remove(int index) {
+        if (index < 0 || index >= this.index) {
+            throw new IndexOutOfBoundsException("Index out of bound.");
+        }
 
-    @Override
-    public int remove(int index) {
-        int temp = this.elements[index];// tạo temp là một biến tạm
+        E temp = this.elements[index];
+
         for (int i = index; i < this.index; i++) {
-            //lấy giá trị của vòng lặp để chạy, nó sẽ chạy đếm khi nào = this.index
-            elements[i] = elements[i + 1];
+            this.elements[i] = elements[i + 1];
         }
-        elements[this.index - 1] = 0;// đưa index trước đó = 0
-        this.index = this.index - 1;// this.index--;(giảm index xún)
-        //decrease array size
+
+        this.elements[this.index - 1] = null;
+        this.index = this.index - 1;
+
+        // check and decrease array size if needed
         if (this.index <= elements.length / 3) {
             this.elements = Arrays.copyOf(this.elements, this.elements.length / 2);
         }
-        return temp;
 
+        return temp;
     }
 
     @Override
     public int size() {
-        return this.index;// kiem tra co bao nhieu index trong array
+        return this.index;
     }
 
     @Override
-    public int indexOf(int element) {
+    public int indexOf(E element) {
         int result = -1;
         for (int i = 0; i < this.index; i++) {
             if (elements[i] == element) {
@@ -89,62 +106,51 @@ public class ArrayListEnhanced<E> implements AbtractList {
     }
 
     @Override
-    public boolean contains(int element) {
-        return false;
+    public boolean contains(E element) {
+        boolean result = false;
+        for (int i = 0; i < this.index; i++) {
+            if (elements[i] == element) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        if (size() == 0) { // if empty returns true
+            return true;
+        } else { // if not empty returns false
+            return false;
+        }
     }
 
     @Override
-    public Iterator iterator() {
-        return null;
+    public String toString() {
+        return Arrays.toString(elements);
     }
 }
 
 class ArrayListEnhancedRunner {
     public static void main(String[] args) {
-        ArrayListEnhanced myArr = new ArrayListEnhanced();
+        ArrayListEnhanced<Integer> myArr = new ArrayListEnhanced<>();
 
-        System.out.println(myArr.size());
-        myArr.add(10);
-        myArr.add(20);
-        myArr.add(30);
-        myArr.add(40);
-//        myArr.add(50);
-        System.out.println(myArr.get(1));//20
-        System.out.println(myArr.get(7));//error
+        // [0,0,0,0,0]
+        myArr.add(10); // [10,0,0,0,0]
+        myArr.add(20); // [10,20,0,0,0]
+        myArr.add(30); // [10,20,30,0,0]
+        myArr.add(40); // [10,20,30,40,0]
+        myArr.add(50); // [10,20,30,40,50]
 
+        System.out.println(myArr);
 
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//        System.out.println(myArr.add(60));
-//
-//
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
-//        System.out.println(myArr.remove(1));
+        ArrayListEnhanced<String> myArrStr = new ArrayListEnhanced<>();
+        myArrStr.add("Hello");
+        myArrStr.add("World");
+
+        System.out.println(myArrStr);
 
 
     }
-
 }
