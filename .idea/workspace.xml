@@ -5,21 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5599202c-cc09-4920-9a10-348e61432457" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArrayListEnhanced.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day2DSA1649/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AbtractList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbtractList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arraylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arraylist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arraylist.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,36 +38,48 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2dscemvYMqNGrjcBYJKOsnxUoxV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ArrayListTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArrayListTest (2).executor&quot;: &quot;Coverage&quot;,
-    &quot;Application.ArrayListTest.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Thang&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/dinht/IdeaProjects/datastructure-day1/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MTConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ArrayListEnhancedRunner (1).executor": "Run",
+    "Application.ArrayListEnhancedRunner.executor": "Run",
+    "Application.ArrayListTest (1).executor": "Run",
+    "Application.ArrayListTest (2).executor": "Coverage",
+    "Application.ArrayListTest.executor": "Run",
+    "Application.BoxRuner.executor": "Debug",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Thang",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/dinht/IdeaProjects/datastructure-day1/src/Main.java",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.ArrayListTest">
-    <configuration name="ArrayListTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayListTest" />
+}]]></component>
+  <component name="RunManager" selected="Application.ArrayListEnhancedRunner (1)">
+    <configuration name="ArrayListEnhancedRunner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayListEnhancedRunner" />
+      <module name="datastructure-day1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListEnhancedRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayListEnhancedRunner" />
       <module name="datastructure-day1" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,19 +99,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="BoxRuner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day2DSA1649.BoxRuner" />
       <module name="datastructure-day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Day2DSA1649.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayListEnhancedRunner (1)" />
+        <item itemvalue="Application.ArrayListEnhancedRunner" />
+        <item itemvalue="Application.BoxRuner" />
         <item itemvalue="Application.ArrayListTest" />
         <item itemvalue="Application.ArrayListTest (2)" />
-        <item itemvalue="Application.ArrayListTest (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +142,7 @@
       <workItem from="1710801686852" duration="6843000" />
       <workItem from="1710821825077" duration="3326000" />
       <workItem from="1711113615205" duration="632000" />
-      <workItem from="1711347291946" duration="1465000" />
+      <workItem from="1711347291946" duration="3966000" />
     </task>
     <servers />
   </component>
@@ -124,9 +153,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Arraylist.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/ArrayListEnhanced.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
