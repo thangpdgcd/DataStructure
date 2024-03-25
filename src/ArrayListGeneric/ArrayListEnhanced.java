@@ -1,5 +1,5 @@
-import java.security.PublicKey;
-import java.util.AbstractList;
+package ArrayListGeneric;
+
 import java.util.Arrays;
 
 public class ArrayListEnhanced<E> implements AbtractList<E> {

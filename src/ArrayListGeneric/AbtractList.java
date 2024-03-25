@@ -1,3 +1,5 @@
+package ArrayListGeneric;
+
 public interface AbtractList<E> {
 
     ///Element use E
