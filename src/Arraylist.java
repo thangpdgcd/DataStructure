@@ -1,12 +1,15 @@
 import javax.swing.text.Element;
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class Arraylist<E> implements AbtractList<E> {
     //khai bao index
+    private int [] element =new int[5];
     private  int index=0;
     //khai bao 1 hang so
+
     private final int DEFAULT_CAPACITY =5;
 
     //mang nay co kieu du lieu la e //ecapsulation
@@ -21,14 +24,49 @@ public class Arraylist<E> implements AbtractList<E> {
     //sau khi khai bao index dong thoi no se tang len 1 gia tri
     @Override
     public boolean add(E element) {
+
+        if(this.index == elements.length)
+        {
+
+            //option 1:
+            //System.out.println("Array is full now");
+            //return false;
+            //option 2:
+           this.elements= Arrays.copyOf(this.elements,this.elements.length * 2);
+           //copy tu element cu cho array element moi
+        }
         elements[index] = element;  // chay theo thu tu thu 0 den cuoi mang
-        index =index+1;
+        this.index =this.index + 1;
         return true; //run success ->true
     }
 
     @Override
+    public boolean add(int index) {
+
+        return false;
+    }
+
+    @Override
     public E remove(int index) {
+//        int temp;
+//        temp = this.elements[ index];
+//        for(int i=index; i<this.index;i++)
+//        {
+//            elements[i]=elements[i+1];
+//        }
+//        elements[this.index-1]=0;
+//        this.index=this.index-1;
+//        return  temp;
+        if(this.index == elements.length /3)
+        {
+            this.elements= Arrays.copyOf(this.elements,this.elements.length / 2);
+        }
         return null;
+    }
+
+    @Override
+    public int size() {
+        return 0;
     }
 
     @Override
