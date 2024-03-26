@@ -109,7 +109,7 @@ class Runner {
         myStack.push(30);
         myStack.push(40);
         myStack.push(50);
-        
+
 //
 //        int result = myStack.pop();
 //        myStack.pop();//40
@@ -125,12 +125,6 @@ class Runner {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
-//        System.out.println(result);
-
-//        System.out.println(myStack.size());
-//        System.out.println(myStack.isEmpty());
-//        System.out.println();
     }
 
 }
