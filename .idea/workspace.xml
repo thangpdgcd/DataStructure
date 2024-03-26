@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5599202c-cc09-4920-9a10-348e61432457" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ArrayListEnhanced.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Day2DSA1649/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StackADT/AbstractStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StackADT/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StackADT/StackEnhanced.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbtractList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbtractList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Arraylist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbtractList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayListGeneric/AbtractList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArrayListEnhanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayListGeneric/ArrayListEnhanced.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -48,12 +49,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ArrayListEnhancedRunner (1).executor": "Run",
-    "Application.ArrayListEnhancedRunner.executor": "Run",
+    "Application.ArrayListEnhancedRunner.executor": "Debug",
     "Application.ArrayListTest (1).executor": "Run",
     "Application.ArrayListTest (2).executor": "Coverage",
     "Application.ArrayListTest.executor": "Run",
     "Application.BoxRuner.executor": "Debug",
     "Application.Main.executor": "Run",
+    "Application.Runner (1).executor": "Run",
+    "Application.Runner.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -70,30 +73,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ArrayListEnhancedRunner (1)">
-    <configuration name="ArrayListEnhancedRunner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayListEnhancedRunner" />
+  <component name="RunManager" selected="Application.Runner (1)">
+    <configuration name="ArrayListEnhancedRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayListGeneric.ArrayListEnhancedRunner" />
       <module name="datastructure-day1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ArrayListEnhancedRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayListEnhancedRunner" />
-      <module name="datastructure-day1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArrayListTest (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayListTest" />
-      <module name="datastructure-day1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArrayListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArrayListTest" />
+      <option name="MAIN_CLASS_NAME" value="ArrayListGeneric.ArrayListEnhancedRunner" />
       <module name="datastructure-day1" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,13 +101,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Runner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackADT.Runner" />
+      <module name="datastructure-day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StackADT.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackADT.Runner" />
+      <module name="datastructure-day1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StackADT.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ArrayListEnhancedRunner (1)" />
+        <item itemvalue="Application.Runner (1)" />
+        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.ArrayListEnhancedRunner" />
+        <item itemvalue="Application.ArrayListEnhancedRunner (1)" />
         <item itemvalue="Application.BoxRuner" />
-        <item itemvalue="Application.ArrayListTest" />
-        <item itemvalue="Application.ArrayListTest (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -142,23 +157,31 @@
       <workItem from="1710801686852" duration="6843000" />
       <workItem from="1710821825077" duration="3326000" />
       <workItem from="1711113615205" duration="632000" />
-      <workItem from="1711347291946" duration="3966000" />
+      <workItem from="1711347291946" duration="13702000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ArrayListEnhanced.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="StackADT.Stack$Node" memberName="next" />
+        <PinnedItemInfo parentTag="StackADT.Stack$Node" memberName="element" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
